@@ -17,7 +17,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet var startView: UIImageView!
     
     // Top bar:
-    
     @IBOutlet weak var navigationBar: UIToolbar!
     @IBOutlet var shareButton: UIBarButtonItem!
     
@@ -37,6 +36,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     var meme: Meme?
+    let topText = "TOP"
+    let bottomText = "BOTTOM"
     
     //MARK: Lifecycle
     override func viewDidLoad() {
@@ -135,9 +136,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     // Initial setup for the app
     func initialSetup() {
         startView.isHidden = false
-        topField.text = "TOP"
+        topField.text = topText
         topField.textAlignment = .center
-        bottomField.text = "BOTTOM"
+        bottomField.text = bottomText
         bottomField.textAlignment = .center
         imagePickerView.image = nil
         shareButton.isEnabled = (imagePickerView.image != nil)
